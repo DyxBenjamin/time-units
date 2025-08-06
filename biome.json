@@ -6,7 +6,8 @@
 		"useIgnoreFile": false
 	},
 	"files": {
-		"ignoreUnknown": false
+		"ignoreUnknown": false,
+		"includes": ["src/**/*.{js,mjs,cjs,ts,tsx,jsx,html,htm,css,md,json}"]
 	},
 	"formatter": {
 		"enabled": true,
@@ -81,9 +82,7 @@
 	},
 	"overrides": [
 		{
-			"includes": [
-				"**/*.{js,mjs,cjs,ts,jsx,tsx}"
-			],
+			"includes": ["**/*.{js,mjs,cjs,ts,jsx,tsx}"],
 			"javascript": {
 				"globals": [
 					"onanimationend",
@@ -216,12 +215,7 @@
 			}
 		},
 		{
-			"includes": [
-				"**/*.ts",
-				"**/*.tsx",
-				"**/*.mts",
-				"**/*.cts"
-			],
+			"includes": ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
 			"linter": {
 				"rules": {
 					"complexity": {
@@ -257,17 +251,13 @@
 			}
 		},
 		{
-			"includes": [
-				"*.json"
-			],
+			"includes": ["*.json"],
 			"formatter": {
 				"indentWidth": 4
 			}
 		},
 		{
-			"includes": [
-				"*.md"
-			],
+			"includes": ["*.md"],
 			"formatter": {
 				"indentWidth": 4
 			}

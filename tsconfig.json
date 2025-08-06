@@ -14,9 +14,6 @@
 		"esModuleInterop": true,
 		"allowSyntheticDefaultImports": true
 	},
-	"include": [
-		"src",
-		"node_modules/@rspack/core/module.d.ts"
-	],
+	"include": ["src", "node_modules/@rspack/core/module.d.ts"],
 	"exclude": ["node_modules", "dist"]
 }

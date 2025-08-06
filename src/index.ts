@@ -1,9 +1,9 @@
-export * from './constants';
-export { days } from './converters/days';
-export { hours } from './converters/hours';
-export { minutes } from './converters/minutes';
-export { ms } from './converters/ms';
-export { seconds } from './converters/seconds';
-export { weeks } from './converters/weeks';
-export { Days, default as timeUnits, Hours, Minutes, Seconds, Weeks } from './time-units';
-export { countdown, delay, sleep } from './utils';
+export * from './constants'
+export { days } from './converters/days'
+export { hours } from './converters/hours'
+export { minutes } from './converters/minutes'
+export { ms } from './converters/ms'
+export { seconds } from './converters/seconds'
+export { weeks } from './converters/weeks'
+export { Days, default as timeUnits, Hours, Minutes, Seconds, Weeks } from './time-units'
+export { countdown, delay, sleep } from './utils'

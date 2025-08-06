@@ -1,4 +1,4 @@
-import { MS_PER_DAY, MS_PER_HOUR, MS_PER_MINUTE, MS_PER_SECOND, MS_PER_WEEK } from '../constants';
+import { MS_PER_DAY, MS_PER_HOUR, MS_PER_MINUTE, MS_PER_SECOND, MS_PER_WEEK } from '../constants'
 
 const fromUnitConverters = {
 	fromSeconds: (s: number) => s * MS_PER_SECOND,
@@ -9,14 +9,16 @@ const fromUnitConverters = {
 }
 
 type MsFunction = {
-	(ms: number): {
-		toSeconds: () => number;
-		toMinutes: () => number;
-		toHours: () => number;
-		toDays: () => number;
-		toWeeks: () => number;
-	};
-} & typeof fromUnitConverters;
+	(
+		ms: number,
+	): {
+		toSeconds: () => number
+		toMinutes: () => number
+		toHours: () => number
+		toDays: () => number
+		toWeeks: () => number
+	}
+} & typeof fromUnitConverters
 
 const msBase = (initialMs: number) => {
 	return {
@@ -25,7 +27,7 @@ const msBase = (initialMs: number) => {
 		toHours: () => initialMs / MS_PER_HOUR,
 		toDays: () => initialMs / MS_PER_DAY,
 		toWeeks: () => initialMs / MS_PER_WEEK,
-	};
-};
+	}
+}
 
-export const ms: MsFunction = Object.assign(msBase, fromUnitConverters);
+export const ms: MsFunction = Object.assign(msBase, fromUnitConverters)

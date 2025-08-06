@@ -1,4 +1,4 @@
-import { defineConfig } from '@rslib/core';
+import { defineConfig } from '@rslib/core'
 
 export default defineConfig({
 	source: {
@@ -15,9 +15,9 @@ export default defineConfig({
 		{
 			format: 'cjs',
 			bundle: true,
-		}
+		},
 	],
 	output: {
 		target: 'web',
 	},
-});
+})

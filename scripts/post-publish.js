@@ -1,9 +1,8 @@
-import { readFileSync } from 'node:fs';
-import path from 'node:path';
+import { readFileSync } from 'node:fs'
+import path from 'node:path'
 
-
-const packageJson = JSON.parse(readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf-8'));
-const { name, version } = packageJson;
+const packageJson = JSON.parse(readFileSync(path.resolve(process.cwd(), 'package.json'), 'utf-8'))
+const { name, version } = packageJson
 
 console.log(`
   [32mSuccessfully published ${name}@latest[0m
@@ -21,4 +20,4 @@ console.log(`
   [35mpnpm install ${name}@${version}[0m
   [35mbun add ${name}@${version}[0m
   [35myarn add ${name}@${version}[0m
-`);
+`)
