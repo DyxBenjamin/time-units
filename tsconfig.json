@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"lib": ["ES2021"],
+		"module": "ESNext",
+		"target": "ES2021",
+		"strict": true,
+		"skipLibCheck": true,
+		"isolatedModules": true,
+		"resolveJsonModule": true,
+		"moduleResolution": "bundler",
+		"useDefineForClassFields": true,
+		"declaration": true,
+		"declarationMap": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true
+	},
+	"include": ["src"],
+	"exclude": ["node_modules", "dist"]
+}
