@@ -1,40 +1,17 @@
-/**
- * Utility functions for common operations
- */
+import { Seconds } from './time-units';
 
-/**
- * Checks if a value is not null or undefined
- * @param value - The value to check
- * @returns True if the value is not null or undefined
- */
-export function isNotNullish<T>(value: T | null | undefined): value is T {
-	return value !== null && value !== undefined;
-}
+export const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
+export const delay = (ms: number, callback: () => any, ) => setTimeout(callback, ms)
 
-/**
- * Safely gets a property from an object
- * @param obj - The object to get the property from
- * @param key - The key of the property
- * @returns The property value or undefined if not found
- */
-export function safeGet<T, K extends keyof T>(obj: T, key: K): T[K] | undefined {
-	return obj?.[key];
-}
-
-/**
- * Type guard to check if a value is a string
- * @param value - The value to check
- * @returns True if the value is a string
- */
-export function isString(value: unknown): value is string {
-	return typeof value === 'string';
-}
-
-/**
- * Type guard to check if a value is a number
- * @param value - The value to check
- * @returns True if the value is a number
- */
-export function isNumber(value: unknown): value is number {
-	return typeof value === 'number' && !isNaN(value);
+export const countdown = (seconds: number, onTick: (remaining: number) => void, onComplete: () => void) => {
+	let remaining = seconds
+	const interval = setInterval(() => {
+		remaining--
+		onTick?.(remaining)
+		if (remaining <= 0) {
+			clearInterval(interval)
+			onComplete?.()
+		}
+	}, Seconds(1))
+	return () => clearInterval(interval)
 }

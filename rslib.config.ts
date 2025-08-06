@@ -18,6 +18,6 @@ export default defineConfig({
 		}
 	],
 	output: {
-		target: 'dom',
+		target: 'web',
 	},
 });

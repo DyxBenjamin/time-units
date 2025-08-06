@@ -1,7 +1,7 @@
 {
-  "version": "0.0.0",
-  "name": "@dyxbenjamin/ts-lib-starter",
-  "description": "A starter template for creating TypeScript libraries.",
+  "version": "1.0.2",
+  "name": "@dyxbenjamin/time-units",
+  "description": "A library for converting time units",
   "author": {
     "name": "Benjamin",
     "email": "benjamingarrido@devclusters.com"
@@ -34,9 +34,8 @@
     "@biomejs/biome": "2.1.1",
     "@rsbuild/core": "^1.4.6",
     "@rslib/core": "^0.10.4",
-    "typescript": "^5.8.3"
+    "typescript": "^5.8.3",
+    "@types/node": "^24.2.0"
   },
-
-  "dependencies": {
-  }
+  "dependencies": {}
 }
